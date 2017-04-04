@@ -1,0 +1,52 @@
+#set terminal png transparent nocrop enhanced font arial 12 size 7210,3210
+
+#set title 'Number_of_VM' 
+set style line 1  lt 1 lw 8 pt 12
+set style line 2  lt 2 lw 8 pt 8
+set style line 3  lt 3 lw 8 pt 6
+set style line 4  lt 5 lw 8 pt 4
+set style line 5  lt 6 lw 8 pt 7
+set style line 6  lt 7 lw 8 pt 4
+set style line 7  lt 8 lw 8 pt 7
+set style line 8  lt 9 lw 8 pt 3
+set style line 9  lt 4 lw 8 pt 5
+set style line 10 lt 9 lw 8 pt 9
+set style line 11 lt 4 lw 8 pt 10
+
+set encoding
+set term postscript eps enhanced
+#set term postscript enhanced monochrome dashed 
+
+#set yr [-0.57 : 2]
+set xr [0: 300]
+
+
+set term postscript eps color
+
+set key box linestyle 6 left top spacing 3  font ',10'  
+
+#set key right top spacing 3 Left reverse center 
+#set key right top spacing 3 Left reverse center font ',12' 
+#set key right top spacing 3 Left reverse center font ',12' 
+
+set xlabel 'Number of Mobile Devices |M|' font "Helvetica, 20" 
+set ylabel 'Total Energy Consumed in M (log\_10 scale)' font "Helvetica, 20"
+
+#set yr [0 : 2]
+#set output 'lamda_ds1.ps'
+#plot "MCC_Lambda0.3energyConsumedOptMCC1MB_400_log.dat" using 1:3 with linespoint title '{/Times=15 {/Symbol l} = U(0.25, 0.3)}' ls 1, "MCC_Lambda0.5energyConsumedOptMCC1MB_400_log.dat" using 1:3 with linespoint title '{/Times=15 {/Symbol l} = U(0.25, 0.5)}' ls 2, "MCC_Lambda1.0energyConsumedOptMCC1MB_400_log.dat" using 1:3 with linespoint title '{/Times=15 {/Symbol l} = U(0.25, 1.0)}' ls 3, "MCC_Lambda1.5energyConsumedOptMCC1MB_400_log.dat" using 1:3 with linespoint title '{/Times=15 {/Symbol l} = U(0.25, 1.5)}' ls 4, "MCC_Lambda2.0energyConsumedOptMCC1MB_400_log.dat" using 1:3 with linespoint title '{/Times=15 {/Symbol l} = U(0.25, 2.0)}' ls 5
+
+#set yr [0 : 5]
+#set output 'lamda_ds20.ps'
+# plot "MCC_Lambda0.3energyConsumedOptMCC20MB_400_log.dat" using 1:3 with linespoint title '{/Times=15 {/Symbol l} = U(0.25, 0.3)}' ls 1, "MCC_Lambda0.5energyConsumedOptMCC20MB_400_log.dat" using 1:3 with linespoint title '{/Times=15 {/Symbol l} = U(0.25, 0.5)}' ls 2, "MCC_Lambda1.0energyConsumedOptMCC20MB_400_log.dat" using 1:3 with linespoint title '{/Times=15 {/Symbol l} = U(0.25, 1.0)}' ls 3, "MCC_Lambda1.5energyConsumedOptMCC20MB_400_log.dat" using 1:3 with linespoint title '{/Times=15 {/Symbol l} = U(0.25, 1.5)}' ls 4, "MCC_Lambda2.0energyConsumedOptMCC20MB_400_log.dat" using 1:3 with linespoint title '{/Times=15 {/Symbol l} = U(0.25, 2.0)}' ls 5
+
+set yr [0 : 5]
+set output 'lamda_ds30.ps'
+plot "MCC_Lambda0.3energyConsumedOptMCC30MB_400_log.dat" using 1:3 with linespoint title '{/Times=15 {/Symbol l} = U(0.25, 0.3)}' ls 1, "MCC_Lambda0.5energyConsumedOptMCC30MB_400_log.dat" using 1:3 with linespoint title '{/Times=15 {/Symbol l} = U(0.25, 0.5)}' ls 2, "MCC_Lambda1.0energyConsumedOptMCC30MB_400_log.dat" using 1:3 with linespoint title '{/Times=15 {/Symbol l} = U(0.25, 1.0)}' ls 3, "MCC_Lambda1.5energyConsumedOptMCC30MB_400_log.dat" using 1:3 with linespoint title '{/Times=15 {/Symbol l} = U(0.25, 1.5)}' ls 4, "MCC_Lambda2.0energyConsumedOptMCC30MB_400_log.dat" using 1:3 with linespoint title '{/Times=15 {/Symbol l} = U(0.25, 2.0)}' ls 5
+
+#reverse enhanced autotitles box linetype -2 
+# pt 6 -- circle
+# pt 7 -- square
+# pt 1 -- mark 
+# pt 12 -- diamond 
+

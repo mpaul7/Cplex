@@ -1,0 +1,55 @@
+#set terminal png transparent nocrop enhanced font arial 12 size 7210,3210
+
+#set title 'Number_of_VM' 
+
+set output 'Number_of_VM.ps'
+
+#set term postscript eps enhanced
+#set term postscript eps color
+
+set term postscript enhanced monochrome dashed 
+
+#set yr [-0.57 : 2]
+set xr [20: 220]
+set yr [0 : 0.4]
+
+#set yr [0 : 55]
+#set xr [0 : 100000]
+
+set style line 1  lt 1 lw 8 pt 12
+set style line 2  lt 2 lw 8 pt 8
+set style line 3  lt 3 lw 8 pt 6
+set style line 4  lt 5 lw 8 pt 4
+set style line 5  lt 6 lw 8 pt 12
+set style line 6  lt 7 lw 8 pt 4
+set style line 7  lt 8 lw 8 pt 7
+set style line 8  lt 9 lw 8 pt 3
+set style line 9  lt 4 lw 8 pt 5
+set style line 10 lt 9 lw 8 pt 9
+set style line 11 lt 4 lw 8 pt 10
+
+set key box linestyle 6 left top spacing 3  font ',10'  
+
+#set key right top spacing 3 Left reverse center 
+#set key right top spacing 3 Left reverse center font ',12' 
+#set key right top spacing 3 Left reverse center font ',12' 
+
+set xlabel 'Number of Mobile Devices' font "Helvetica, 20" 
+#set ylabel 'Average Number of Collisions' font "Helvetica, 20"
+
+# ----- WOB vs WB ----------
+plot "/home/mpaul/Dropbox/cplex/scheduler/results/average/numberOfVM/MCC_Lambda1.0energyRequiredMCC1MB_400.dat" using 1:2 with linespoint title '{/Times=17 SN3}' ls 1, "/home/mpaul/Dropbox/cplex/scheduler/results/average/numberOfVM/MCC_Lambda1.0energyConsumedNonOptMCC1MB_400.dat" using 1:3 with linespoint title '{/Times=17 SN5}' ls 2, "/home/mpaul/Dropbox/cplex/scheduler/results/average/numberOfVM/MCC_Lambda1.0energyConsumedOptMCC1MB_400.dat" using 1:4 with linespoint title '{/Times=17 SN7}' ls 3
+
+
+# ----- sn5_vmX.ps ----------
+#plot "/home/mpaul/Dropbox/Simulations/Results/graph_dat_files/WOB/20-500/T15/sn5_vm1/WOB_20-500_sn5_vm1_T15.dat" using 1:2 with linespoint title '{/Times=17 vm1}' ls 1, "/home/mpaul/Dropbox/Simulations/Results/graph_dat_files/WOB/20-500/T15/sn5_vm2/WOB_20-500_sn5_vm2_T15.dat" using 1:2 with linespoint title '{/Times=17 vm2}' ls 2, "/home/mpaul/Dropbox/Simulations/Results/graph_dat_files/WOB/20-500/T15/sn5_vm5/WOB_20-500_sn5_vm5_T15.dat" using 1:2 with linespoint title '{ /Times=17 vm5}' ls 3, "/home/mpaul/Dropbox/Simulations/Results/graph_dat_files/WOB/20-500/T15/sn5_vm10/WOB_20-500_sn5_vm10_T15.dat" using 1:2 with linespoint title '{/Times=17 vm10}' ls 6 
+
+
+
+
+#reverse enhanced autotitles box linetype -2 
+# pt 6 -- circle
+# pt 7 -- square
+# pt 1 -- mark 
+# pt 12 -- diamond 
+

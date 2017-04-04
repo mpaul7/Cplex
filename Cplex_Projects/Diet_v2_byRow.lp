@@ -1,0 +1,15 @@
+\ENCODING=ISO-8859-1
+\Problem name: ilog.cplex
+
+Minimize
+ obj: 1.84 x1 + 2.19 x2
+
+Subject To
+ c1:  510 x1 + 370 x2 - Rgc1  = 2000
+ c3:  34  x1 + 35  x2 - Rgc3  = 350
+Bounds
+ 0 <= x1   <= 10
+ 0 <= x2   z<= 10
+ 0 <= Rgc1 <= 7999
+ 0 <= Rgc3 <= 25
+End
